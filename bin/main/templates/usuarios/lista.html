@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fé em deus</title>
+</head>
+<body>
+	<div>
+		<h2>Users</h2>
+		<table>
+			<thead>
+				<th>Nome</th>
+				<th>Sobrenome</th>
+			</thead>
+			<tbody>
+				<tr th:each="usuario : ${usuarios}">
+					<td th:text="${usuario.nome}"></td>
+					<td th:text="${usuario.sobrenome}"></td>
+				</tr>
+			</tbody>
+		<table>
+	</div>
+	<a href="/usuarios/create">Criar usuario</a>
+</body>
+</html>
