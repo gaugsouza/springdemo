@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Criar usuário</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<form action="#" th:action="@{/usuarios}" th:object="${usuario}" method="post">
-		<label for="nome"> Nome: </label>
-		<input type="text"
-			   th:field="*{nome}"
-			   id="nome"
+	<form action="#" th:action="@{/usuarios}" th:object="${usuario}" method="post" >
+		<label for="nome">Nome</label>
+		<input type="text" 
+			   th:field="*{nome}" 
+			   id="nome" 
 			   placeholder="Seu nome">
-		<span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span><br>
-		<label for="sobrenome"> Sobrenome: </label>
-		<input type="text"
+		<span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+		
+		<label for="sobrenome">Sobrenome</label>
+		<input type="text" 
+			   id="sobrenome" 
 			   th:field="*{sobrenome}"
-			   id="sobrenome"
 			   placeholder="Seu sobrenome">
-		<span th:if="${#fields.hasErrors('sobrenome')}" th:errors="*{sobrenome}"></span><br>
-		<input type="submit" value="Salvar">
+		<span th:if="${#fields.hasErrors('sobrenome')}" th:errors="*{sobrenome}"></span>
+		
+		<input type="submit" value="Adicionar Usuário">
 	</form>
 </body>
 </html>

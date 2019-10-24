@@ -1,25 +1,23 @@
-package br.ifsp.test.entidades;
+package br.edu.ifsp.lp2a4.hellospring.entidades;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 
-//Esta classe está emulando um repositório de dados no modelo ActiveRecord
 @Entity
 public class Usuario {
-	
-	public Usuario() {}
-	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
-	@NotBlank(message = "Nome não pode ser vazio")
+	@NotBlank(message = "O nome é obrigatório!")
 	private String nome;
 	
-	@NotBlank(message = "Sobrenome não pode ser vazio")
+	@NotBlank(message = "O sobrenome é obrigatório!")
 	private String sobrenome;
 	
 	public long getId() {
@@ -41,6 +39,10 @@ public class Usuario {
 	}
 	public void setSobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
+	}
+	
+	public Usuario() {
+		
 	}
 	
 	public Usuario(String nome, String sobrenome) {

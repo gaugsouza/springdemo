@@ -1,4 +1,4 @@
-package br.ifsp.test.springdemo;
+package br.edu.ifsp.lp2a4.hellospring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringdemoApplicationTests {
+public class HellospringApplicationTests {
 
 	@Test
 	public void contextLoads() {
